@@ -122,7 +122,7 @@ def fileStringSearch(filename, string):
     else:
         return 'String is not at least 3 characters long'
         
-##print(fileStringSearch('/Users/carahvillacampa/Downloads/testing2.txt','life'))
+##print(fileStringSearch('testing2.txt','life'))
 
 '''
 Problem 3:
@@ -166,7 +166,7 @@ using thefunction (round, decimal places)
 '''
 
 def examGrades():
-    infile= open('/Users/carahvillacampa/Downloads/exam_grades.csv','r')
+    infile= open('exam_grades.csv','r')
     readfile= infile.read().strip()
     infile.close()
 
@@ -209,7 +209,7 @@ def listofWordsInFile(filename,letter):
             wordlst.append(word)
     return wordlst
 
-##print(listofWordsInFile('/Users/carahvillacampa/Downloads/testing2.txt','a'))
+##print(listofWordsInFile('testing2.txt','a'))
 '''
 Problem 2:
 Write a function called convertCase()
@@ -245,7 +245,7 @@ def convertCase(In_filename, Out_filename):
     outfile.write(readfile)
     infile.close()
     
-##print(convertCase('/Users/carahvillacampa/Downloads/testing2.txt',
+##print(convertCase('testing2.txt',
 ##            'converted.txt'))
 '''
 Problem 3:
@@ -259,7 +259,7 @@ It should:
 '''
 
 def highestLowestGrades():
-    infile=open('/Users/carahvillacampa/Downloads/exam_grades.csv','r')
+    infile=open('exam_grades.csv','r')
     readfile=infile.read().strip()
     infile.close()
 
@@ -293,7 +293,7 @@ It should:
 '''
 
 def Checkgrades():
-    infile=open('/Users/carahvillacampa/Downloads/exam_grades.csv','r')
+    infile=open('exam_grades.csv','r')
     readfile= infile.read().strip()
     infile.close()
 
@@ -362,7 +362,7 @@ PC:
 '''
 
 def createStudentDictionary():
-    infile= open('/Users/carahvillacampa/Downloads/class_roster.txt','r')
+    infile= open('class_roster.txt','r')
     readfile=infile.readlines()
     infile.close()
 
@@ -446,12 +446,7 @@ class Vehicle:
     def odometerAdd(self, amount):
         self.odometer += amount
         return self.odometer
-    def __str__(self):
-        return self.mode
-    def __str__(self):
-        return self.maxPassenger
-    def __str__(self):
-        return self.odometer
+ 
     def __str__(self):
         return 'The mode of transport is: {}\nMax Passengers: {}\nOdometer:{}'.format(self.mode,
         self.maxPassengers,self.odometer)
@@ -464,12 +459,7 @@ class Car(Vehicle):
         self.make= make
         self.model= model
         self.color= color
-    def __str__(self):
-        return self.make
-    def __str__(self):
-        return self.model
-    def __str__(self):
-        return self.color
+   
     def __str__(self):
         return 'mode: {}\nMax passengers: {}\nOdometer: {}\Make: {}\nModel: {}\nColor: {}'.format(self.mode,
         self.maxPassengers,self.odometer,self.make,self.model,self.color)
@@ -480,10 +470,6 @@ class Boat(Vehicle):
          super().__init__(mode,maxPassengers,odometer)
          self.length= length
          self.horsepower= horsepower
-    def __str__(self):
-        return self.length
-    def __str__(self):
-        return self.horsepower
     def __str__(self):
         return 'mode: {}\nMax passengers: {}\nOdometer: {}\Length: {}\Horsepower: {}'.format(self.mode,
         self.maxPassengers,self.odometer,self.length,self.horsepower)
